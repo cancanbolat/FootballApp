@@ -1,0 +1,32 @@
+﻿@inherits PlayerTableComponent
+
+@if (PlayerList.Count > 0)
+{
+    <div class="d-flex align-content-around flex-wrap">
+        @foreach (var p in PlayerList)
+        {
+            <div class="card mr-4 mb-4" style="width: 10rem;">
+                <a href="/playerdetail/@p.Id">
+                    <img class="card-img-top img-fluid" src="https://i.stack.imgur.com/l60Hf.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ct">@p.FirstName @p.LastName</h5>
+                    </div>
+                </a>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="/playerdetail/@p.Id" class="btn btn-primary btn-block">Update</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/playerdetail/@p.Id" class="btn btn-danger btn-block">Delete</a>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <span>
+        Loading players...
+    </span>
+}

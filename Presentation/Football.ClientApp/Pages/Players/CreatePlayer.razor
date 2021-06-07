@@ -1,0 +1,37 @@
+﻿@page "/createplayer"
+@inherits CreatePlayerComponent
+
+<h3>Create Player</h3>
+<hr />
+<div class="container-fluid h-100 mt-5">
+    <div class="row justify-content-center align-content-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <EditForm Model="@command" OnValidSubmit="Create">
+                <DataAnnotationsValidator />
+                <div class="form-group">
+                    <input @bind-value="command.FirstName" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group">
+                    <input @bind-value="command.LastName" class="form-control" placeholder="Enter Last Name" />
+                </div>
+                <InputSelect @bind-Value="command.TeamId" class="form-control">
+                    <option value="0" selected disabled>Select Team</option>
+                    @foreach (var item in Teams)
+                    {
+                        <option value="@item.Id">@item.TeamName</option>
+                    }
+                </InputSelect>
+                <br>
+                <InputSelect @bind-Value="command.PositionId" class="form-control">
+                    <option value="0" selected disabled>Select Position</option>
+                    @foreach (var item in Positions)
+                    {
+                        <option value="@item.Id">@item.PositionName</option>
+                    }
+                </InputSelect>
+                <hr />
+                <button class="btn btn-info btn-block">Create</button>
+            </EditForm>
+        </div>
+    </div>
+</div>

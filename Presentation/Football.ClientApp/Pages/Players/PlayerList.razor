@@ -1,0 +1,23 @@
+﻿@page "/playerlist"
+@using Football.ClientApp.Components.PlayerComponent
+
+<h3>Player List</h3>
+
+<div class="row">
+    <div class="col-md-10">
+        <!--Search-->
+    </div>
+    <div class="col-md-2">
+        <a href="/createplayer" class="oi oi-plus btn btn-success">Create Player</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <PlayerTable />
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <!--Pagination-->
+    </div>
+</div>
