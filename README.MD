@@ -1,6 +1,6 @@
 ﻿# FootballApp
 
-FootballApp is a application built with [Blazor](https://blazor.net) framework using the client-side hosting model with WebAssembly in the browser invoking .NET Core REST APIs secured by a JWT service. For authenticated pages and APIs, use the credentials (Username: cancanbolat / Password: 123456789).
+FootballApp is a application built with [Blazor](https://blazor.net) framework using the client-side hosting model with WebAssembly in the browser invoking .NET Core REST APIs secured by a JWT service.
 
 * Endpoints: Get teams, positions, players, player details, create player
 
